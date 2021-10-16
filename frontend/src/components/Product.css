@@ -1,9 +1,9 @@
 .product {
   width: 300px;
   padding: 1rem;
-  background: #fff;
+  background: #f4f4f4;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); */
   margin: 20px auto;
   border-radius: 6px;
   display: flex;
@@ -14,8 +14,9 @@
 
 .product > img {
   width: 100%;
-  height: 170px;
-  object-fit: contain;
+  height: 350px;
+  object-fit: fill;
+  margin: 0 auto;
   border-radius: 8px;
 }
 
@@ -29,6 +30,7 @@
 }
 
 .info__name {
+  width: 100%;
   font-weight: bold;
   font-size: 1.2rem;
   overflow: hidden;
@@ -47,6 +49,7 @@
   text-align: center;
   color: #171717;
   width: 100%;
+  border-radius:6px;
   padding: 8px 16px;
   background-color: #f4f4f4;
   border: 1px solid #171717;
@@ -55,6 +58,7 @@
 
 .info__button:hover {
   background: #171717;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   color: #f4f4f4;
 }
 

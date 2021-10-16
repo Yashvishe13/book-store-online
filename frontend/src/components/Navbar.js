@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import logo from '../assets/bookwagon.png'
 
 const Navbar = ({ click }) => {
   const cart = useSelector((state) => state.cart);
@@ -13,10 +14,12 @@ const Navbar = ({ click }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <h2>Online Shop</h2>
+        <img className="logo_image" src={logo} alt="logo"/>
+        <span className="navbar__logo">Book Wagon</span>
       </div>
 
       <ul className="navbar__links">
+        <li><input className="search_box" type="text" placeholder="Search.." /></li>
         <li>
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
@@ -25,8 +28,8 @@ const Navbar = ({ click }) => {
             </span>
           </Link>
         </li>
-        <li>
-          <Link to="/">Shop</Link>
+        <li className="navbar__shop">
+          <Link className="shop__link" to="/">Shop</Link>
         </li>
       </ul>
 
